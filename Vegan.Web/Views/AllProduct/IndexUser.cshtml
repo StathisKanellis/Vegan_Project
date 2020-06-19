@@ -1,0 +1,104 @@
+﻿
+@model  Vegan.Web.Models.AllProductViewModel
+@using PagedList;
+@using PagedList.Mvc;
+
+
+@{
+    ViewBag.Title = "All Products";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+<div ng-controller="VeganController">
+    <div id="top" pxlurl="[product_url]">
+        <div class="contentbox-wrapper">
+            <div class="contentbox docsection boxed productlist">
+                <div id="pageheader" class="docsection-wrapper ">
+                    <div class="">
+                        <div class="breadcrumbs-wrapper clearfix">
+                            <div class="breadcrumbs">
+                                <section>
+                                    <p><a id='catCrumbHomeLink' href='/'>Home</a> > <a href="/FoodHerb/IndexUser">Dry food & Herbs > </a> <a href="/Tea/IndexUser">Teas</a></p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="title-wrapper clearfix">
+                            <div class="title">
+                                <header>
+                                    <h1>All Products</h1>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-wrapper clearfix">
+                    <div class="header">
+                        <header class="container">
+                            <h2>
+                                <small>Total Items: {{NumberOfProducts}} </small>
+                            </h2>
+                            <div id="pagination" style=" float: right;
+                                                    margin: 0 0 10px;
+                                                    line-height: 40px;
+                                                    color: gray;">
+                                <ul>
+                                    <li>
+                                        <small><dir-pagination-controls ></dir-pagination-controls></small>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </header>
+                    </div>
+                </div>
+                <div class="content-wrapper clearfix">
+                    <div class="content">
+                        <div class="product" dir-paginate="product in AllProducts | itemsPerPage: 12">
+                            <div class="image" style="background-image: url({{product.ImageURL}});"><img src={{product.ImageURL}} alt="{{product.Title}}"></div>
+                            <div class="frame"></div>
+                            <div class="info">
+                                <div class="info-data">
+                                    <div>
+                                        <div>
+                                            <div class="morebutton"><a ng-click="UrlBuilder(product)" class="btn">Read More</a></div>
+                                            <div class="price">
+
+                                                <span class="yourprice">Your Price: <strong>€{{product.Price}}</strong></span>
+
+                                            </div>
+
+                                            <div class="cartbutton">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3><a ng-click="UrlBuilder(product)"><span><span>{{product.Title}}</span></span></a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div id="pagination" style=" float: right;
+                                                    margin: 0 0 10px;
+                                                    line-height: 40px;
+                                                    color: gray;">
+                    <ul>
+                        <li>
+                            <small><dir-pagination-controls></dir-pagination-controls></small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+                <div id="pageheader" class="docsection-wrapper">
+                    <div class="docsection boxed">
+                        <div class="breadcrumbs-wrapper clearfix">
+                            <div class="breadcrumbs">
+                                <section>
+                                    <p><a href="/">Home</a> > Contact Us</p>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="title-wrapper clearfix">
+                            <div class="title">
+                                <head>
+                                    <h1>Contact Us</h1>
+                                </head>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="updateform" class="docsection-wrapper">
+                    <div class="docsection boxed">
+                        <section id="contactUs">
+                            <div class="storeInfo pad10 boxShadow">
+                                <div class="header">
+                                    <h3>You can find us at:</h3>
+                                </div>
+                                <div class="store-address1 item">Kifisias 123</div>
+                                <div class="store-city item">Athens, Attiki</div>
+                                <div class="store-country item">TK11360</div>
+                                <div class="item"><strong>Phone:</strong>210-453-0777</div>
+                                <div class="item"><strong>Email:</strong>veganeshopproject@gmail.com</div>
+                            </div>
+                            <hr>
+                            <div class="clear"></div>
+                            <div class="crmForm pad10 boxShadow">
+                                <form method="post" action="crm.asp" id="frmForm" name="frmForm">
+                                    <input type="hidden" name="action" id="action" value="" />
+                                    <input type="hidden" name="custid" value="0" />
+                                    <input type="hidden" name="orderid" value="" />
+                                    <input type="hidden" name="productid" value="[productid]" />
+                                    <div class="header">
+                                        <h3>Contact Form</h3>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="departmentid">Department:</label>
+                                        <select name="departmentid" id="departmentid" tabindex="1" class="txtBoxStyle">
+                                            <option value='1'>General</option>
+                                            <option value='2'>Web/Online Orders</option>
+                                        </select>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="customer">Name:</label>
+                                        <input type="text" name="customer" value="" size="40" maxlength="50" tabindex="2" class="txtBoxStyle" />
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="phone">Phone:</label>
+                                        <input type="text" name="phone" value="" size="40" maxlength="50" tabindex="3" class="txtBoxStyle" />
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="custemail">Email:</label>
+                                        <input type="email" name="custemail" value="" size="40" maxlength="50" tabindex="4" class="txtBoxStyle" />
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="subject">Subject:</label>
+                                        <input name="subject" type="text" id="subject" value="" size="40" maxlength="150" tabindex="5" class="txtBoxStyle" />
+                                        <div class="clear"></div>
+                                    </div>
+                                    <div class="crmField">
+                                        <label for="reply">Message:</label>
+                                            <textarea name="reply" id="reply" tabindex="6" class="txtBoxStyle"></textarea>
+                                    </div>
+                                    <div id="divSubmitButton" class="update-btn">
+                                        <button type="button" @*onclick="javascript:addNew();"*@ class="btn"><i class="icon-pencil"></i> Submit Request</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </div>

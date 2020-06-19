@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Welcome to Vegan";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<link href="~/Content/assets/templates/common-html5/css/flexslider.css?vcart=10.1.6" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="~/Content/assets/templates/common-html5/js/jquery.flexslider-min.js?vcart=10.1.6"></script>
+
+<div id="top" pxlurl="[product_url]">
+    <div class="contentbox-wrapper">
+        <div class="contentbox">
+            <div id="slider" class="slider-wrapper theme-default">
+                <div id="homeCarousel" class="flexslider">
+                    <ul class="slides">
+                        <li><a href="/"><img src="~/Content/assets/images/zw-living-2020-1.jpg" /></a></li>
+                        <li><a href="/"><img src="~/Content/assets/images/HomePageCarousel/EcoFriendly_NaturalProduct.jpg" /></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="quickinfo" class="docsection-wrapper ">
+                <div class="docsection boxed">
+                    <div class="content-wrapper clearfix">
+                        <div class="floral-l"></div>
+                        <div class="floral-r"></div>
+                        <div class="content">
+                            <section>
+                                <p><em>Flat rate shipping in Greece:</em> <span><strong>Now €4.50</strong> on all orders</span> | <span><strong>FREE SHIPPING</strong> on orders over €50</span> </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="banners" class="docsection-wrapper">
+                <div class="docsection boxed">
+                    <div class="banner-wrapper clearfix">
+                        <div id="ban-thin" class="banner"><a href="/"><img src="~/Content/assets/images/thin-what-were-up-to.jpg" alt="What's Going on at The Vegan"></a></div>
+                    </div>
+                    <div class="banner-wrapper clearfix">
+                        <div id="ban-left" class="banner"><a href="/Tea/IndexUser"><img src="~/Content/assets/images/trio-naturel-tea.jpg" alt="Bulk Loose Leaf Organic Tea"></a></div>
+                        <div id="ban-right" class="banner"><a href="/EssentialOil/IndexUser"><img src="~/Content/assets/images/trio-essential-oils.jpg" alt="Pure Essential Oils"></a></div>
+                        <div id="ban-middle" class="banner"><a href="/HomeVegan/IndexUser"><img src="~/Content/assets/images/trio-wide-zero-waste-home.jpg" alt="Zero Waste Lifestyle"></a></div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="intro" class="docsection-wrapper">
+                <div class="line"></div>
+                <div class="docsection boxed">
+                    <div class="content-wrapper clearfix">
+                        <div class="content">
+                            <section>
+                                <p>
+                                    <img src="~/Content/assets/templates/vegan2020/images/img52x80floral-l.png" id="imgRotate" />
+                                    Welcome to The Vegan Shop! We are a premiere destination for zero waste goodies, refillery, pure essential oils, and natural and organic wellness.
+                                   We are certain that you'll find the wellness products you need when you shop here!
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+    jQuery(document).ready(function () {
+        jQuery('#homeCarousel').flexslider({
+            animation: "fade",
+            slideshowSpeed: 6000,
+            controlNav: false,
+            keyboard: false
+        });
+    });
+</script>
+
